@@ -1,0 +1,64 @@
+<html>
+<head>
+<script>
+function validate()
+{
+     var usern = document.getElementById("username").value;
+     var password =  document.getElementById("password").value;
+     var errUsername = document.getElementById("errUsername");
+     var errPassword = document.getElementById("errPassword");
+     var successMessage = document.getElementById("successMessage");
+     
+     
+     
+     if(usern.length == 0)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+     {
+   	  		errUsername.innerHTML="<font color = blue>Please enter the name </font>";
+   	  		return false;
+     }
+     else if(password.length == 0)
+     {
+    	 errUsername.innerHtMl ="";
+    	 errPassword.innerHTML="<font color = blue>Please enter the password </font>";
+    	 return false;
+     }
+     else if(password.length <6)
+     {
+    	 
+    	 errPassword.innerHTML="<font color = blue>Password must contain contain atleast 6 characters </font>";
+    	 return false;
+     }
+     else
+     {
+    	 errPassword.innerHTML=""; 
+    	 successMessage.innerHTML ="<font color = green>Welcome "+ usern +"</font>";
+     }
+     
+}
+</script>
+</head>
+
+<body bgcolor = "yellow"text="red"><center>
+
+<b>
+<font face="comic sans ms "size ="20">hloo</b> harshini please fill login details
+</font></center>
+
+<form action = "success.html" onsubmit = "return validate()">
+<table cellspacing ="10" cellpadding ="10" align="center">
+<tr><td>Username</td>
+<td><input type ="text"id ="username" name ="username"></td>
+<td><span id = "errUsername"></span></td></tr>
+<tr><td>Password</td>
+<td><input type ="password"id ="password" name ="password"></td>
+<td><span id = "errPassword"></span></td></tr>
+
+<tr><td><span id = "successMessage"></span id></td></tr>
+<tr><td align ="center"><input type ="submit" value ="login"></td>
+<td align ="center"><input type ="reset" value ="register"></td></tr>
+</table>
+</form>
+<a href = "demo3.html">demo3</a>
+</body>
+
+</html>
