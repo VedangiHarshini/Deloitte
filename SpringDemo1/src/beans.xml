@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+
+	xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xmlns:p="http://www.springframework.org/schema/p"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<!-- <bean id ="cust" class ="com.deloitte.cms.model.Customer">
+<property name = "customerId" value="101"></property>
+<property name = "customerName" value="Harshini"></property>
+<property name = "customerAddress" value="Hyderabad"></property>
+<property name = "billAmount" value="10100"></property>
+<property name = "address" ref="add"></property>
+</bean>
+
+<bean id ="add" class ="com.deloitte.cms.model.Address">
+<property name = "aId" value="500001"></property>
+<property name = "city" value="Hyderabad"></property>
+<property name = "state" value="Telangana"></property>
+</bean> -->
+
+
+<!--<bean id ="cust" class ="com.deloitte.cms.model.Customer"
+	  autowire="byName" >
+<property name = "customerId" value="145"></property>
+<property name = "customerName" value="Ashok"></property>
+<property name = "customerAddress" value="Hyd"></property>
+<property name = "billAmount" value="1010"></property>
+</bean>
+
+<bean id ="address" class ="com.deloitte.cms.model.Address">
+<property name = "aId" value="500001"></property>
+<property name = "city" value="Hyd"></property>
+<property name = "state" value="Telangana"></property>
+</bean> -->
+
+<bean id ="cust" class ="com.deloitte.cms.model.Customer"
+	  autowire="byName" scope="singleton"
+	  init-method = "myFirstMethod" destroy-method = "myLastMethod">
+<property name = "customerId" value="145"></property>
+<property name = "customerName" value="Vijay"></property>
+<property name = "customerAddress" value="Hyd"></property>
+<property name = "billAmount" value="1010"></property>
+</bean>
+
+<!-- <bean id ="address" class ="com.deloitte.cms.model.Address">
+<property name = "aId" value="500001"></property>
+<property name = "city" value="Hyd"></property>
+<property name = "state" value="Telangana"></property>
+</bean>  -->
+
+	</beans>
